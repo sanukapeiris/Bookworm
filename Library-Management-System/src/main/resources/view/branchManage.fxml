@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.bookworm.Controller.branchManageController">
+    <children>
+      <ImageView fitHeight="720.0" fitWidth="1126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background-image.jpg" />
+         </image>
+      </ImageView>
+        <JFXTextField fx:id="txtName" labelFloat="true" layoutX="9.0" layoutY="323.0" prefHeight="25.0" prefWidth="231.0" promptText="Name">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtLocation" layoutX="261.0" layoutY="323.0" prefHeight="25.0" prefWidth="231.0" promptText="Location">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="7.0" layoutY="422.0" prefHeight="31.0" prefWidth="231.0" promptText="Address">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXComboBox fx:id="cmbAdmin" layoutX="263.0" layoutY="427.0" prefHeight="25.0" prefWidth="231.0" promptText="Admin" />
+        <TableView fx:id="tblBook" layoutX="513.0" layoutY="186.0" onMouseClicked="#mouseClickOnAction" prefHeight="422.0" prefWidth="556.0">
+            <columns>
+            <TableColumn fx:id="colId" prefWidth="67.0" text="Id" />
+                <TableColumn fx:id="colName" prefWidth="115.0" text="Name" />
+                <TableColumn fx:id="colLocation" prefWidth="126.0" text="Location" />
+                <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="157.0" text="Address" />
+                <TableColumn fx:id="colAdmin" prefWidth="90.0" text="Admin" />
+            </columns>
+        </TableView>
+        <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="596.0" onAction="#addOnAction" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #1877F2;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="179.0" layoutY="596.0" onAction="#updateOnAction" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #ff006e;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="328.0" layoutY="596.0" onAction="#deleteOnAction" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #f22618;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+      <ImageView fitHeight="67.0" fitWidth="78.0" layoutX="1001.0" layoutY="41.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/room.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0d00ff" layoutX="15.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Id :" wrappingWidth="95.19997558593741">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtId" fill="#36a420" layoutX="117.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B001" wrappingWidth="74.20001220703125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="332.0" layoutY="35.0" prefHeight="70.0" prefWidth="385.0" text="Branch Manage" textFill="#4caf4f">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
